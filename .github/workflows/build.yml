@@ -26,12 +26,11 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN}}
 
       # Build the Docker image and push it to Docker Hub
-      # ...existing code...
       - name: Build and Push Docker Image
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v2
         with:
-          context: ./fordocker
-          file: ./fordocker/Dockerfile
+          context: .
+          file: ./Docker
           push: true
           tags: vaseem3999/repo1:latest
-# ...existing code...
+          
