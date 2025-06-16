@@ -29,10 +29,11 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: ./Docker
+          context: ./fordocker
+          file: ./fordocker/Dockerfile
           push: true
           tags: vaseem3999/repo1:latest
           
+
 
 
